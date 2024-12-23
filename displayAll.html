@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Employee List</title>
+</head>
+<body>
+<h1>All Employees</h1>
+<ul>
+  <li th:each="employee : ${employees}">
+    <a th:href="@{/display/{employeeId}(employeeId=${employee.employeeId})}" th:text="${employee.name}">Employee Name</a>
+  </li>
+</ul>
+</body>
+</html>
